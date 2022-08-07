@@ -140,7 +140,8 @@ ls[column][row]
 1. 将数据存储于本地CSV文件
 
 方法1：单行写入
-with open('xxx.csv', 'w', newlines='') as f:
+import csv
+with open('xxx.csv', 'w', newline='') as f:
     writer = csv.writer(f) # 创建初始化写入对象
     writer.writerow(['color', 'red']) # 一行一行写入
 
