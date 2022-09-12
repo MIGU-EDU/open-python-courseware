@@ -46,7 +46,7 @@ CSV 格式就是采用逗号分隔值，它是一种通用的、相对简单的�
 
 c = ['北京','上海','广州','深圳']
 f = open('city.csv', 'w')
-f.write(',',join(c) + '\n')
+f.write(','.join(c) + '\n')
 f.close()
 
 在上述Python 程序的同目录下，如果存在city.csv文件，执行上述程序，
@@ -57,7 +57,7 @@ f.close()
 
 c = ['北京','上海','广州','深圳']
 with open('city.csv', 'w') as f:
-    f.write(',',join(c) + '\n')
+    f.write(','.join(c) + '\n')
 
 从CSV格式文件中读出数据，表示为列表对象，示例如下：
 f = open('city.csv', 'r')
