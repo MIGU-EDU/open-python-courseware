@@ -48,8 +48,8 @@
 a = [5, 3, 5, 2, 8]
 count = len(a)
 for i in range (1, count):
-    key = a[j]
-    j = j - 1
+    key = a[i]
+    j = i - 1
     while j >= O and a[j] > key:
         a [j + 1) = a[j]
         j -= 1
