@@ -95,22 +95,25 @@ A.解析算法 B.枚举算法 C.排序算法 D.查找算法
 请编写程序实现上述功能。
 
 import random
-maxn = int (input ("请输入要产生的数据个数: "))
+max = int (input ("请输入要产生的数据个数: "))
 ①
-for i in range(maxn) :
+for i in range(max):
     a.append(random.randrange(1, 50, 1))
-    print("原始数据: ")
-    print(a)
-    key, n = 0, maxn
-    while key < n:
-        i = n - 1
-        while ②
-            i = i - 1
-            if i == key:
-                key = key + 1
-            else:
-                a.remove(③)
-                n = n - 1
+
+print("原始数据: ")
+print(a)
+
+key, n = 0, max
+while key < n:
+    i = n - 1
+    while ②
+        i = i - 1
+
+    if i == key:
+        key = key + 1
+    else:
+        a.remove(③)
+        n = n - 1
 
 for i in range (n):
     for j in range (len(a) -1, i, -1):
@@ -123,8 +126,8 @@ print("共删除数据: ", ⑤,"个")
 
 评分标准:
 ① a = [](3分)
-② a[j] != a[key] (4分)
-③ a[j] (3分)
+② a[i] != a[key] (4分)
+③ a[i] (3分)
 ④ a[j-1],a[j] (3分)
-⑤ maxn - n (3分)
+⑤ max - n (3分)
 """
