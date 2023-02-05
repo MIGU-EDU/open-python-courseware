@@ -154,10 +154,10 @@ li
 可以通过global关键字,通过局部变量修改全局变量的值,如下例所示。
 
 >>> name="zhang" #定义全局变量
->>>     def f():
->>>         global name #在函数内部,通过global关键字,通过局部变量修改全局变量的值
->>>         name="li"
->>>         print(name)
+>>> def f():
+>>>     global name #在函数内部,通过global关键字,通过局部变量修改全局变量的值
+>>>     name="li"
+>>>     print(name)
 >>> f() #打印局部变量name的值
 >>> print(name) #打印全局变量name的值
 
@@ -178,7 +178,7 @@ nonlocal关键字用来在函数或局部作用域使用外层(非全局)变量�
 >>> a()
 >>> a()
 
-运行结果：1
+运行结果：1 3
 
 思考
 
