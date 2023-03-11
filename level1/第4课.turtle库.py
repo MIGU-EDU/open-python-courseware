@@ -254,4 +254,97 @@ D.5
 解析：程序中的t1=turtle.Turtle.Turtle（＇turtle＇）就是在设置turtle不同画笔的名称，
 本题中有t1、t2、t3、t4这4支画笔，所以选择C。
 
+
+4.6 turtle 的运动体系
+
+4.6.1 知识点详解
+
+1. turtle的相对方向
+
+小海龟(画笔)在画布上是有方向的,默认的小海龟的头部(前方)为屏幕的右侧,尾部(后方)为屏幕的左侧,小海龟的右侧为屏幕的下方,小海龟的左侧为屏幕的上方
+小海龟(画笔)的方向会随着画笔方向的改变进行改变,所以,该方向为相对方向，以小海龟的头部所朝向的前方为标准建立新的方向体系。
+
+对应的命令有turtle.forward(a)、turtle.backward(a)、 turtle.circle (radius,extent=None, steps=None)、 turtle.left(angle)、 turtle.right(angle).
+
+
+2. turtle的绝对方向
+
+除了相对于小海龟头部方向的相对方向之外, turtle还有绝对方向,其特征如下。
+
+(1) 绝对方向是不变的；
+
+(2) 绝对方向的划分如下:
+
+屏幕的右方为0°起点,也是360°终点;
+屏幕上方为90° (逆时针) /-270° (顺时针);
+屏幕左侧为180° /-180° ;
+屏幕下方为270° /-90°
+
+图4-4 小海龟的绝对方向
+
+对应的命令为turtle.setheading(angle)。
+
+3. 相关函数
+
+(1) turtle.goto(×,y)
+作用：让小海龟直线前进到指定坐标。
+参数: (x.y)为目标位置的x坐标及y坐标。
+
+(2) turtle.forward(a)
+作用:让小海龟向前移动a个像素。
+参数：a 代表移动的像素数。
+特别说明：可以简写为turtle.fd(a)。如果 a 为负数，代表后退a 像素。
+
+(3) turtle.backward(a)
+作用：让小海龟向后移动 a 个像素。
+参数：a 代表移动的像素数。
+特别说明:可以简写为turtle.bk(a)。如果a为负数,代表前进a像素。
+
+(4) turtle.left(angle)
+作用：让小海龟向左转angle度。
+参数: angle代表旋转的角度。
+特别说明:参数为正数,代表左转;为负数,代表右转。
+
+(5) turtle.right(angle)
+作用:让小海龟向右转angle度。
+参数：angle 代表旋转的角度。
+特别说明：参数为正数，代表右转；为负数，代表左转。
+
+(6) turtle.circle(radius, extent=None, steps=None)
+作用：绘制圆或者圆弧。
+参数: (radius, extent=None, steps-None)中的radius代表的是半径,这个参数是必须有的;
+extent代表的是弧度的度数，如果没有，默认的为360° ;steps代表的是绘制该弧度（圆)所需要用的边数。
+特别说明: turtle.circle()中的参数,半径为必需的,弧度和边数都为可选的,但是如果设定了边数，如果参数前不加“steps=”，则必须设定弧度。
+例如需要用4条边绘制一个半径为80的360°的图形,必须写成turtle.circle(80,360,4)或者turtle.circle(80,steps=4),不能写成turtle.circle(80,4)。
+
+正多边形的绘制: turtle.circle()可以绘制正多边形,但是要注意:一是绘制正多边形时, turtle.circle()的3个参数要完整;
+二是正多边形的边长并不是turtle.circle(中的半径(也不是直径)，如图4-5所示。如果不完整，需要按照“特别说明”进行参数说明。
+
+(7) turtle setheading(angle)
+
+作用:让小海龟转到指定的绝对角度,该命令和前面的turtle.left(angle)及turtle.right(angle)最大的不同在于,
+该命令指的是转到指定角度,与之前画笔所朝向的方向没有任何的关系。
+参数: angle为必须有的参数,代表旋转到的绝对角度,参数可以为负数。特别说明: turtle.setheading(可以简写为turtle.seth(。
+
+(8) turtle.speed(a)
+作用：设定画笔的运动速度。
+参数: a的数值范围是0~10,数字越大,速度越快,但是最快的是0而不是10,那是因为当参数为0时, turtle绘图不需要动画。
+
+(9) turtle.dot(a)
+作用：绘制圆点。
+参数: a为圆点的半径,单位为像素。
+
+(10) turtle.home()
+作用：让小海龟返回原点。
+参数：无。
+特别说明:小海龟返回原点(0,0)后,方向为初始方向,即屏幕的右方,但是画笔的颜色等设置依然保留。
+
+4.6.2 易错点
+
+(1) turtle.dot()的参数为直径,而turtle.circle()的参数为半径。
+
+(2) turtle.seth0的参数为绝对角度，而turtle.left)及turtle.righto的参数为相对角度。
+
+(3) turtle.speed()的参数范围为0~10,最快的是0,最慢的是1。
+
 """
