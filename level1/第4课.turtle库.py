@@ -347,4 +347,78 @@ extent代表的是弧度的度数，如果没有，默认的为360° ;steps代�
 
 (3) turtle.speed()的参数范围为0~10,最快的是0,最慢的是1。
 
+4.6.3 模拟考题
+
+考题1 单选题
+
+turtle库中，画笔绘制的速度范围为（）。
+
+A.任意大小
+B．0到10之间的整数（含0和10）
+C．1到10之间的整数（含1和10）
+D．0到100之间的整数（含0和100）
+
+答案：B
+解析：turtle的画笔绘制速度函数为turtle.speed（），该函数的参数范围为0～10的整数。
+
+考题2 单选题
+海龟作图中，小海龟默认朝向屏幕的（）方。
+A.左
+B.右
+C.上
+D.下
+
+答案：B
+解析：小海龟默认的方向为前方，而默认的前方是屏幕的右方。
+
+考题3 判断题
+turle 库中，turtle．backward（200） 和 turtle．forward（-200）的使用效果是一样的。（）
+
+答案：正确
+解析：turtle.forward（）中的参数如果为负数，则代表后退，相当于turtle.backward()。
+
+考题4单选题
+
+运行下列程序后，会绘制出以下哪个图形？（ ）
+import turtle
+turtle.pensize(3)
+turtle.forward(150)
+turtle.circle(50,180)
+turtle.forward(180)
+turtle.circle(48,180)
+turtle.forward(150)
+turtle.circle(45,180)
+
+4.7 其他需要掌握的函数
+
+4.7.1知识点详解
+(1)turtle.reset0
+作用：清空画布，并且重置turtle 状态为初始状态。
+参数：无。
+
+(2)turtle.clear0
+作用：清空turtle窗口，但是turtle的位置和状态不会改变。
+参数：无。
+
+(3)turtle.clone(
+作用：创建并返回一个 turtle的一个克隆体，该克隆体与turtle具有相同的属性。
+参数：无。
+
+(4)turtle.stamp(
+作用：印章，将小海龟的形状或者绘制的形状作为印章复制到屏幕上，和Scratch中的印章作用一致。
+参数：无。
+
+(5)turtle.screensize(canvwidth,canvheight,bg)
+作用：设定画布的尺寸和背景颜色。
+参数：一共有3个，前两个设定画布的宽度和高度，第三个设定背景颜色。
+说明：如果没有参数，则返回当前窗口的宽度和高度。
+
+（6）turtle．mainloop（）或 turtle．done（）
+作用：停止画笔绘制，但绘图窗体不关闭。由于这是用来停止画笔的，所以必须用在程序中的最后一个语句。
+参数：无。
+
+4.7.2 易错点
+（1）turtle．rest0和turtle．clear0有着本质的区别：turtle．rest（）是完全初始化，画笔的所有设置均恢复到初始状态，
+但不包括画布的设置（比如画布的大小、画布的背景颜色等）；turtle．clear（）只是清空画布，但是画笔的状态不会改变。
+（2）turtle.mainloop（）和turtle.done（）的作用是一样的，都是停止画笔绘制，但绘图窗体不关闭。
 """
