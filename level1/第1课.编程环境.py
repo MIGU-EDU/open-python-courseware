@@ -53,8 +53,8 @@ VisualStudio Code (NVSCode)、Jupyter Notebook、 pycharm等。
 
 (4) Python文件的扩展名为.py及pyw,所以.pyw文件也是Python文件。
 
-(5) 如果Python中有import等导人库文件的语句,
-在保存Python文件时要注意文件名不能和import导人的库文件重名。
+(5) 如果Python中有import等导入库文件的语句,
+在保存Python文件时要注意文件名不能和import导入的库文件重名。
 但是如果文件不在同一个文件夹下,命名方式不受影响。
 如程序中含有"import turtle”语句,则不能把文件保存为turtle.py。
 
